@@ -1,3 +1,6 @@
+# My app
+this is simply a feelunique close that i will write using React skills i have gained
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
