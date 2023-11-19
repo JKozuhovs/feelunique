@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'avant-garde';
+    src: url('C:\Users\bocla\OneDrive\Desktop\web developpment\freecodecamp\site-duplicate\fonts\font-file-bold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('C:\Users\bocla\OneDrive\Desktop\web developpment\freecodecamp\site-duplicate\fonts\DOMINIKTH.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.NavBar{
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto;
+}
+.topAndBot{
+    display: flex;
+    flex-direction: column;
+}
+.topNavBar{
+    width: 100%;
+    border: 1px solid pink;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.firstSegment{
+    flex: 2;
+    height: 100%;
+    border: 1px solid blue;
+}
+.secondSegment{
+    flex: 3.5;
+    height: 100%;
+    border: 1px solid yellow;
+}
+.thirdSegment{
+    flex: 1;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon{
+    font-size: 20px;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.bottomNavBar{
+    box-sizing: border-box;
+    width: 100%;
+    /* border: 1px solid blue; */
+    height: 50px;
+    display: flex;
+}
+.nav-buttons{
+    margin: 0;
+    padding: 15px 0 15px 0;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction:row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+li{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    /* font-family: 'avant-garde'; */
+    font-weight: 600;
+    font-size: 14px;
+    height: 100%;
+}
+
