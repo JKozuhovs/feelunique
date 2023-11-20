@@ -1,21 +1,41 @@
 import React from 'react';
 import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
-const NavBar = () => {
-    // this.state = {
-    //     search: ""
-    // }
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
+
+
+class NavBar extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            search: ''
+        }
+        this.handleInput = this.handleInput.bind(this);
+    }
+    handleInput(event){
+        this.setState({
+            search: event.target.value
+        });
+    }
+
+    render(){
     return(
         <div className='NavBar'>
             <div className='topAndBot'>
                 <div className='topNavBar'>
-                    <div className='firstSegment'></div>
+                    <div className='firstSegment'>
+                        <div></div>
+                        <div id="feelunique">FEEL<span style={{fontWeight: 'bold'}}>UNIQUE</span></div>
+                    </div>
                     <div className='secondSegment'>
-                        {/* <input type="text"  onChange={this.handleInput}></input> */}
+                        <div id='search-container'>
+                            <FontAwesomeIcon id="search-icon" icon={faMagnifyingGlass} />
+                            <input type="text" id="main-search-bar" placeholder='Search 50,000+ beauty products, 1500+ brands' value={this.state.search}  onChange={this.handleInput}></input>
+                        </div>
                     </div>
                     <div className='thirdSegment'>
                         <FontAwesomeIcon className='icon' icon={faUser} />
@@ -40,6 +60,7 @@ const NavBar = () => {
             </div>
         </div>
     )
+    }
 }
 
 export default NavBar;
