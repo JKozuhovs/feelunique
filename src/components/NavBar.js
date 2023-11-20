@@ -28,7 +28,9 @@ class NavBar extends React.Component {
             <div className='topAndBot'>
                 <div className='topNavBar'>
                     <div className='firstSegment'>
-                        <div></div>
+                        <div>
+                            <img alt='uk flag' src='./src/assets/ukflag.svg'></img>
+                        </div>
                         <div id="feelunique">FEEL<span style={{fontWeight: 'bold'}}>UNIQUE</span></div>
                     </div>
                     <div className='secondSegment'>

@@ -35,6 +35,10 @@ input::placeholder{
     height: 100%;
     border: 1px solid blue;
 }
+#feelunique{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
 .secondSegment{
     flex: 3.5;
     height: 100%;
