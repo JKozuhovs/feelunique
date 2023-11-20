@@ -6,12 +6,17 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 const NavBar = () => {
+    // this.state = {
+    //     search: ""
+    // }
     return(
         <div className='NavBar'>
             <div className='topAndBot'>
                 <div className='topNavBar'>
                     <div className='firstSegment'></div>
-                    <div className='secondSegment'></div>
+                    <div className='secondSegment'>
+                        {/* <input type="text"  onChange={this.handleInput}></input> */}
+                    </div>
                     <div className='thirdSegment'>
                         <FontAwesomeIcon className='icon' icon={faUser} />
                         <FontAwesomeIcon className='icon' icon={faHeart} />
