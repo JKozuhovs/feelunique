@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar'
+import FlagPopUp from './components/FlagPopUp'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,6 +16,7 @@ function App() {
       </header>
     <main>
       <NavBar />
+      <FlagPopUp />
     </main>
     </div>
   );
