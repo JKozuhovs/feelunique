@@ -5,7 +5,8 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import ukFlag from '../assets/ukflag.svg'
 
 
 class NavBar extends React.Component {
@@ -28,9 +29,10 @@ class NavBar extends React.Component {
             <div className='topAndBot'>
                 <div className='topNavBar'>
                     <div className='firstSegment'>
-                        <div>
-                            <img alt='uk flag' src='./src/assets/ukflag.svg'></img>
-                        </div>
+                        <div id='flag-chevron'>
+                            <img id="flag" alt='uk flag' src={ukFlag}></img>
+                            <FontAwesomeIcon id='chevron' icon={faChevronRight} />
+                        </div>                      
                         <div id="feelunique">FEEL<span style={{fontWeight: 'bold'}}>UNIQUE</span></div>
                     </div>
                     <div className='secondSegment'>
