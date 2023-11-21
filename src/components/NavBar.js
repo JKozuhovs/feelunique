@@ -42,7 +42,16 @@ class NavBar extends React.Component {
                         </div>
                     </div>
                     <div className='thirdSegment'>
-                        <FontAwesomeIcon className='icon' icon={faUser} />
+                        <div>
+                            <FontAwesomeIcon className='icon' icon={faUser} />
+                            <div >
+                                <div>Account / Sign-in</div>
+                                <div>Rewards</div>
+                                <div>Refer a friend</div>
+                                <div>Wish List</div>
+                                <div>Contact Us</div>
+                            </div>
+                        </div>
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>

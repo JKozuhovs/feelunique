@@ -55,7 +55,7 @@ class FlagPopUp extends React.Component{
                     </div>
                     <div className='flag-wrapper'>
                         <img className="flag" alt='uk flag' src={ukFlag}></img>
-                        <div className='country-name'>International</div>
+                        <div className='country-name'>Intern</div>
                     </div>
                     <div className='flag-wrapper'>
                         <img className="flag" alt='uk flag' src={ukFlag}></img>

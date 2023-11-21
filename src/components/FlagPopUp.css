@@ -81,7 +81,8 @@
 }
 .flag-wrapper{
     display: flex;
-    margin-right: 10px;
+    margin-right: 7px;
+    margin-bottom: 8px;
 }
 .flag{
     width: 2vh;
