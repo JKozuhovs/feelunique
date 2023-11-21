@@ -7,6 +7,7 @@ import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import ukFlag from '../assets/ukflag.svg'
+import FlagPopUp from './FlagPopUp'
 
 
 class NavBar extends React.Component {
