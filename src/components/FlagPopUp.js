@@ -9,6 +9,7 @@ class FlagPopUp extends React.Component{
             visibility: 'hidden'
         }
     }
+    
     render(){
         return(
             <div id="main-container">

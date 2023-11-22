@@ -15,8 +15,11 @@ function App() {
         
       </header>
     <main>
-      <NavBar />
-      <FlagPopUp />
+      <div id="main">
+        <NavBar />
+        {/* <FlagPopUp /> */}
+
+      </div>
     </main>
     </div>
   );

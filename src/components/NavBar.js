@@ -14,13 +14,27 @@ class NavBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            search: ''
+            search: '',
+            userIconPop: 'hidden'
         }
         this.handleInput = this.handleInput.bind(this);
+        this.userIconEnter = this.userIconEnter.bind(this);
+        this.userIconLeave = this.userIconLeave.bind(this);
     }
     handleInput(event){
         this.setState({
             search: event.target.value
+        });
+    }
+    
+    userIconEnter(){
+        this.setState({
+            userIconPop: 'visible'
+        });
+    }
+    userIconLeave(){
+        this.setState({
+            userIconPop: 'hidden'
         });
     }
 
@@ -43,15 +57,17 @@ class NavBar extends React.Component {
                         </div>
                     </div>
                     <div className='thirdSegment'>
-                        <div>
-                            <FontAwesomeIcon className='icon' icon={faUser} />
-                            <div >
+                        <div id="user-icon-container" onMouseEnter={this.userIconEnter} onMouseLeave={this.userIconLeave}>
+                            <FontAwesomeIcon id="user-icon" className='icon' icon={faUser} />
+                            {this.state.userIconPop == 'visible' && 
+                                <div id="user-icon-popup">
                                 <div>Account / Sign-in</div>
+                                <hr id='user-icon-divider'></hr>
                                 <div>Rewards</div>
                                 <div>Refer a friend</div>
                                 <div>Wish List</div>
                                 <div>Contact Us</div>
-                            </div>
+                            </div>}
                         </div>
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />

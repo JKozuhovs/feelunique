@@ -13,9 +13,6 @@
   }
 }
 
-.App-header {
-  
-}
 
 .App-link {
   color: #61dafb;
@@ -28,4 +25,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#main{
+  width: 70%;
+  margin: 0 auto;
 }

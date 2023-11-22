@@ -16,8 +16,8 @@ input::placeholder{
 }
 .NavBar{
     box-sizing: border-box;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 15px auto;
 }
 .topAndBot{
     display: flex;
@@ -92,6 +92,47 @@ input::placeholder{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+#user-icon-container{
+   
+}
+#user-icon{
+    position: relative;
+}
+#user-icon-popup{
+    position: absolute;
+    background-color: rgb(236, 236, 236);
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 135px;
+}
+#user-icon-popup div:first-of-type{
+    font-weight: bold;
+    font-size: 12px;
+}
+#user-icon-popup div{
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+}
+#user-icon-popup div:hover{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+#user-icon-divider{
+    box-sizing: border-box;
+    padding: 0;
+    border-top: 1px solid rgb(212, 212, 212);
+    
+    width: 100%;
+    
 }
 .icon{
     font-size: 25px;
