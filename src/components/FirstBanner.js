@@ -13,8 +13,8 @@ function FirstBanner(){
     function changeBanner(){
          console.log(banner);
          setBanner(!banner);
-
     }
+
    const backgroundImage = banner ? `url(${banner1})` : `url(${banner2})`;
 
     return(

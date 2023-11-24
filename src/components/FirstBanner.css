@@ -9,7 +9,8 @@
     background-image: url('../assets/banner1.png');
     background-size: 1700px;
     background-position: 50px -50px;
-   
+    transition: 0.5s;
+    cursor: pointer;
 }
 #left-button, #right-button{
     position: absolute;
