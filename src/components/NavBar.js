@@ -61,13 +61,13 @@ class NavBar extends React.Component {
                             <FontAwesomeIcon id="user-icon" className='icon' icon={faUser} />
                             {this.state.userIconPop == 'visible' && 
                                 <div id="user-icon-popup">
-                                <div>Account / Sign-in</div>
-                                <hr id='user-icon-divider'></hr>
-                                <div>Rewards</div>
-                                <div>Refer a friend</div>
-                                <div>Wish List</div>
-                                <div>Contact Us</div>
-                            </div>}
+                                    <div>Account / Sign-in</div>
+                                    <hr id='user-icon-divider'></hr>
+                                    <div>Rewards</div>
+                                    <div>Refer a friend</div>
+                                    <div>Wish List</div>
+                                    <div>Contact Us</div>
+                                </div>}
                         </div>
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
