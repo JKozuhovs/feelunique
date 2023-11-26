@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'avant-garde';
-    src: url('C:\Users\bocla\OneDrive\Desktop\web developpment\freecodecamp\site-duplicate\fonts\font-file-bold.otf') format('otf');
+    src: url('../../fonts/font-file-bold.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Century Gothic';
-    src: url('C:\Users\bocla\OneDrive\Desktop\web developpment\freecodecamp\site-duplicate\fonts\DOMINIKTH.TTF') format('truetype');
+    src: url('../../fonts/DOMINIKTH.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

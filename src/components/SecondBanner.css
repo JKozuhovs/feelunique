@@ -16,6 +16,8 @@
 }
 #banner2-1{
     background-image: url(../assets/SecondBanner1.PNG);
+    background-size:fill;
+    background-position: center;
 }
 #banner2-2{
     background-image: url(../assets/SecondBanner2.PNG);
