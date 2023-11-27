@@ -1,0 +1,21 @@
+#logo-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    height: 140px;
+    margin: 0 auto;
+}
+.eachLogo{
+    height: 100%;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.eachLogo:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+}

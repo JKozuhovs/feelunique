@@ -20,7 +20,7 @@ function ThirdBanner(){
     return(
         <>
             <div id="thirdBannerWrapper">
-                {banners.map((number)=>(
+                {Object.keys(banners).map((number)=>(
                     <div style={{backgroundImage: `url(${banners[number]})`}} className={`thirdBannerSection thirdBanner${number}`}></div>
                 ))}
                
