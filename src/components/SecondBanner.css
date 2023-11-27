@@ -1,6 +1,6 @@
 #second-banner-wrapper{
     width: 100%;
-    height: 400px;
+    height: 410px;
     margin-top: 20px;
     box-sizing: border-box;
     display: flex;
@@ -13,11 +13,11 @@
     height: 100%;
     width: 48%;
     cursor: pointer;
+    background-size:cover;
+    background-position: center;
 }
 #banner2-1{
     background-image: url(../assets/SecondBanner1.PNG);
-    background-size:fill;
-    background-position: center;
 }
 #banner2-2{
     background-image: url(../assets/SecondBanner2.PNG);
