@@ -19,8 +19,8 @@ function FirstBanner(){
 
     return(
         <div id='main-container' style={{backgroundImage: backgroundImage}}>
-            <button id='left-button' onClick={changeBanner}><FontAwesomeIcon icon={faChevronLeft} /></button>
-            <button id='right-button' onClick={changeBanner}><FontAwesomeIcon icon={faChevronRight} /></button>
+            <button id='left-button' onClick={changeBanner}><FontAwesomeIcon id='left-icon' icon={faChevronLeft} /></button>
+            <button id='right-button' onClick={changeBanner}><FontAwesomeIcon id='right-icon' icon={faChevronRight} /></button>
         </div>
     );
 }

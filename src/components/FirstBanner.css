@@ -16,16 +16,24 @@
 #left-button, #right-button{
     position: absolute;
     top: 50%;
-    height: 40px;
-    width: 25px;
+    height: 60px;
+    width: 40px;
     border: none;
     cursor: pointer;
     background-color: rgba(233, 233, 233, 0.842);
     transform: translateY(-50%);
+    
 }
 #left-button{
     left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 #right-button{
     right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#left-icon, #right-icon{
+    font-size: 19px;
 }
