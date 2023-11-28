@@ -7,10 +7,11 @@
     padding: 0;
     background-color: rgba(255, 187, 0, 0.014);
     background-image: url('../assets/banner1.png');
-    background-size: 1700px;
-    background-position: 50px -50px;
+    background-size: fill;
+    background-position: center;
     transition: 0.5s;
     cursor: pointer;
+    height: 370px;
 }
 #left-button, #right-button{
     position: absolute;
