@@ -6,13 +6,20 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import banner1 from '../assets/banner1.png';
 import banner2 from '../assets/banner2.png';
 
+let clickAllowed = true;
 
 function FirstBanner(){
     const [banner, setBanner] = useState(true);
     
     function changeBanner(){
-         console.log(banner);
-         setBanner(!banner);
+        if(clickAllowed){
+            setBanner(!banner);
+        }
+
+        clickAllowed = false;
+        setTimeout(()=>{
+            clickAllowed = true;
+        }, 700);
     }
 
    const backgroundImage = banner ? `url(${banner1})` : `url(${banner2})`;

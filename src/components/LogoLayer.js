@@ -6,7 +6,6 @@ import logo3 from '../assets/logo/aveeno.png';
 import logo4 from '../assets/logo/jo-malone.png';
 import logo5 from '../assets/logo/kerastase.png';
 import logo6 from '../assets/logo/pascal.png';
-import testImg from '../assets/banner1.png';
 
 const logos = {
     1: logo1,
