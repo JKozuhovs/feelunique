@@ -1,0 +1,37 @@
+#makeup-container{
+    padding-bottom: 200px;
+}
+.eachItemContainer{
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.219);
+    border-radius: 10px;
+    height: 330px;
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eachItemContainer:hover{
+    cursor: pointer;
+}
+.heartContainer{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+}
+.buttons{
+    position: absolute;
+    bottom: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: none;
+    width: 90%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0 10px 0;
+}
+.buttons:hover{
+    background-color: rgb(175, 175, 175);
+    cursor: pointer;
+}

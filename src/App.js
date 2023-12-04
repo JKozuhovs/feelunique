@@ -7,6 +7,7 @@ import SecondBanner from './components/SecondBanner';
 import ThirdBanner from './components/ThirdBanner';
 import LogoLayer from './components/LogoLayer';
 import BestSellers from './components/BestSellers';
+import MakeupItems from './components/MakeupItems'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import React, {useState, useEffect} from 'react';
@@ -29,6 +30,7 @@ function App() {
         <ThirdBanner />
         <LogoLayer />
         <BestSellers />
+        <MakeupItems />
         {/* <FlagPopUp /> */}
         {/* {<TestComponent />} */}
       </div>
