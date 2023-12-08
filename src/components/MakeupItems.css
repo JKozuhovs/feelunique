@@ -5,6 +5,9 @@
     gap: 15px;
     margin-top: 20px;
 }
+.itemImage{
+    height: 50%;
+}
 .eachItemContainer{
     position: relative;
     border: 1px solid rgba(128, 128, 128, 0.219);
@@ -37,6 +40,11 @@
 .eachItemContainer:hover .heartContainer{
     cursor: pointer;
     background-image: url('../assets/heart-images/black_red_heart.png');
+}
+.itemNames{
+    font-weight: bold;
+    font-size: 14px;
+    width: 80%;
 }
 .buttons{
     position: absolute;
