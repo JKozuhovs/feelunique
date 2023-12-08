@@ -21,19 +21,20 @@ function MakeupItems(){
 
 
     const items = [
-        {id: '1',
-         source: item0,
-         price: "13.76",
-         name: "INGLOT AMC Eyerliner Gel 5.5g"
-        },
-        {id: '2',
-         source: item1,
-         price: "77.52",
-         name: "Tom Ford Eye Color Quad 6g"
-        }
-    ]
+        { id: '0', source: item0, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
+        { id: '1', source: item1, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
+        { id: '2', source: item2, price: "9.99", name: "Revlon ColorStay Foundation", heartState: 'empty_heart' },
+        { id: '3', source: item3, price: "12.50", name: "Maybelline Sky High Mascara", heartState: 'empty_heart' },
+        { id: '4', source: item4, price: "7.30", name: "NYX Professional Eyeshadow Palette", heartState: 'empty_heart' },
+        { id: '5', source: item5, price: "18.40", name: "Estée Lauder Double Wear Concealer", heartState: 'empty_heart' },
+        { id: '6', source: item6, price: "20.00", name: "Fenty Beauty Pro Filt'r Primer", heartState: 'empty_heart' },
+        { id: '7', source: item7, price: "10.99", name: "Urban Decay Setting Spray", heartState: 'empty_heart' },
+        { id: '8', source: item8, price: "16.75", name: "Huda Beauty Liquid Matte Lipstick", heartState: 'empty_heart' },
+        { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
+    ];
 
-    function makeHeartRed(){
+    function makeHeartRed(e){
+        console.log(e);
         setHeartType(black_red_heart);
     }
     function makeHeartTrans(){
@@ -49,7 +50,9 @@ function MakeupItems(){
                 <div onMouseEnter={makeHeartRed} onMouseLeave={makeHeartTrans} className='eachItemContainer'>
                     
                     <img src={item.source} />
-                    <img onMouseEnter={makeHeartFullyRed} onMouseLeave={makeHeartRed} src={heartType} alt="a heart like button" className='heartContainer' />
+                    {/* <img id={"heart"+item.id} onMouseEnter={makeHeartFullyRed} onMouseLeave={makeHeartRed} src={heartType} alt="a heart like button" className='heartContainer' /> */}
+                    <div className='heartContainer'></div>
+                    <div>{item.name}</div>
                     <button className='buttons'>Add to Bag</button>
                 </div>             
             )}
