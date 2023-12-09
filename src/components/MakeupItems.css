@@ -34,6 +34,10 @@
     height: 25px;
     /* border: 1px solid red; */
 }
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+}
 .eachItemContainer:hover .heartContainer:hover{
     background-image: url('../assets/heart-images/fully_red.png');
 }
@@ -42,9 +46,12 @@
     background-image: url('../assets/heart-images/black_red_heart.png');
 }
 .itemNames{
-    font-weight: bold;
+    font-weight:600;
     font-size: 14px;
     width: 80%;
+}
+.priceDiv{
+    font-weight: bold;
 }
 .buttons{
     position: absolute;

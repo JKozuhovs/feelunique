@@ -13,6 +13,8 @@ import item6 from '../assets/makeup_items/item6.PNG';
 import item7 from '../assets/makeup_items/item7.PNG';
 import item8 from '../assets/makeup_items/item8.PNG';
 import item9 from '../assets/makeup_items/item9.PNG';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -52,8 +54,18 @@ function MakeupItems(){
                     
                     {/* <img id={"heart"+item.id} onMouseEnter={makeHeartFullyRed} onMouseLeave={makeHeartRed} src={heartType} alt="a heart like button" className='heartContainer' /> */}
                     <div className='heartContainer'></div>
-                    <div className='itemNames'>{item.name}</div>
-                    <button className='buttons'>Add to Bag</button>
+                    <div className='itemInfo'>
+                        <div className='itemNames'>{item.name}</div>
+                        <div className='priceDiv'>€{item.price}</div>
+                        <div className='starContainer'>
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} />
+                        </div>
+                       
+                    </div>
+                        <button className='buttons'>Add to Bag</button>
                 </div>             
             )}
         </div>
