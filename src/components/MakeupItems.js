@@ -107,8 +107,7 @@ function MakeupItems(){
                     <div className='itemInfo'>
                         <div className='itemNames'>{item.name}</div>
                         <div className='starsVotesContainer'>
-                            <div className='starsContainer'>
-                                {console.log("this is output: " + itemRatings[index].rating)}                            
+                            <div className='starsContainer'>                           
                                 {itemRatings[index].rating == 1 ? <OneStarRating /> : itemRatings[index].rating == '2' ? <TwoStarRating /> : itemRatings[index].rating === 3 ? <ThreeStarRating /> : itemRatings[index].rating == 4 ? <FourStarRating /> : <FiveStarRating />}
                             </div>
                             <div className='votesContainer'>
