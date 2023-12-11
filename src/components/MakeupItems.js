@@ -16,6 +16,10 @@ import item9 from '../assets/makeup_items/item9.PNG';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
+const itemRatings = [];
+for(let i=0; i < 10; i++){
+    itemRatings.push({rating:Math.floor((Math.random() * (5 - 1 + 1))), amountVotes: Math.floor((Math.random()*(2000-1+1)))});
+}
 
 
 function MakeupItems(){
@@ -35,6 +39,7 @@ function MakeupItems(){
         { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
     ];
 
+    console.log("ratings: " + itemRatings[9].amountVotes);
     function makeHeartRed(e){
         console.log(e);
         setHeartType(black_red_heart);
@@ -48,7 +53,7 @@ function MakeupItems(){
 
     return(
         <div id="makeup-container">
-            {items.map((item) => 
+            {items.map((item, index) => 
                 <div onMouseEnter={makeHeartRed} onMouseLeave={makeHeartTrans} className='eachItemContainer'>
                     <img className='itemImage' src={item.source} />
                     
@@ -56,13 +61,18 @@ function MakeupItems(){
                     <div className='heartContainer'></div>
                     <div className='itemInfo'>
                         <div className='itemNames'>{item.name}</div>
-                        <div className='priceDiv'>€{item.price}</div>
-                        <div className='starContainer'>
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
-                            <FontAwesomeIcon icon={faStar} />
+                        <div className='starsVotesContainer'>
+                            <div className='starsContainer'>
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                            <div className='votesContainer'>
+                                {itemRatings[index].amountVotes}
+                            </div>
                         </div>
+                        <div className='priceDiv'>€{item.price}</div>
                        
                     </div>
                         <button className='buttons'>Add to Bag</button>
