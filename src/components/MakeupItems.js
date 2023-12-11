@@ -15,12 +15,57 @@ import item8 from '../assets/makeup_items/item8.PNG';
 import item9 from '../assets/makeup_items/item9.PNG';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
 const itemRatings = [];
 for(let i=0; i < 10; i++){
     itemRatings.push({rating:Math.floor((Math.random() * (5 - 1 + 1))), amountVotes: Math.floor((Math.random()*(2000-1+1)))});
 }
 
+const OneStarRating = () => 
+<div className='testDiv'>
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+</div>;
+
+const TwoStarRating = () => 
+<div className='testDiv'>
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+</div>;
+
+const ThreeStarRating = () => 
+<div className='testDiv'>
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={farStar} />
+    <FontAwesomeIcon icon={farStar} />
+</div>;
+
+const FourStarRating = () => 
+<div className='testDiv'>
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={farStar} />
+</div>;
+
+const FiveStarRating = () => 
+<div className='testDiv'>
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+    <FontAwesomeIcon icon={faStar} />
+</div>;
 
 function MakeupItems(){
     const [heartType, setHeartType] = useState(empty_heart);
@@ -63,10 +108,8 @@ function MakeupItems(){
                         <div className='itemNames'>{item.name}</div>
                         <div className='starsVotesContainer'>
                             <div className='starsContainer'>
-                                <FontAwesomeIcon icon={faStar} />
-                                <FontAwesomeIcon icon={faStar} />
-                                <FontAwesomeIcon icon={faStar} />
-                                <FontAwesomeIcon icon={faStar} />
+                                {console.log("this is output: " + itemRatings[index].rating)}                            
+                                {itemRatings[index].rating == 1 ? <OneStarRating /> : itemRatings[index].rating == '2' ? <TwoStarRating /> : itemRatings[index].rating === 3 ? <ThreeStarRating /> : itemRatings[index].rating == 4 ? <FourStarRating /> : <FiveStarRating />}
                             </div>
                             <div className='votesContainer'>
                                 {itemRatings[index].amountVotes}
