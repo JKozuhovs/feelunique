@@ -17,6 +17,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // Random index from 0 to i
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+
+const items = [
+    { id: '0', source: item0, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
+    { id: '1', source: item1, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
+    { id: '2', source: item2, price: "9.99", name: "Revlon ColorStay Foundation", heartState: 'empty_heart' },
+    { id: '3', source: item3, price: "12.50", name: "Maybelline Sky High Mascara", heartState: 'empty_heart' },
+    { id: '4', source: item4, price: "7.30", name: "NYX Professional Eyeshadow Palette", heartState: 'empty_heart' },
+    { id: '5', source: item5, price: "18.40", name: "Estée Lauder Double Wear Concealer", heartState: 'empty_heart' },
+    { id: '6', source: item6, price: "20.00", name: "Fenty Beauty Pro Filt'r Primer", heartState: 'empty_heart' },
+    { id: '7', source: item7, price: "10.99", name: "Urban Decay Setting Spray", heartState: 'empty_heart' },
+    { id: '8', source: item8, price: "16.75", name: "Huda Beauty Liquid Matte Lipstick", heartState: 'empty_heart' },
+    { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
+];
+
+const items1 = shuffleArray(items);
+const items2 = shuffleArray(items);
+const items3 = shuffleArray(items);
+
+console.log("this is a first random array: " + items1[0].price);
+
+
 const itemRatings = [];
 for(let i=0; i < 10; i++){
     itemRatings.push({rating:Math.floor((Math.random() * (5 - 1 + 1))), amountVotes: Math.floor((Math.random()*(2000-1+1)))});
@@ -67,22 +95,9 @@ const FiveStarRating = () =>
     <FontAwesomeIcon icon={faStar} />
 </div>;
 
-function MakeupItems(){
+function MakeupItems({arrays}){
     const [heartType, setHeartType] = useState(empty_heart);
-
-
-    const items = [
-        { id: '0', source: item0, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
-        { id: '1', source: item1, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
-        { id: '2', source: item2, price: "9.99", name: "Revlon ColorStay Foundation", heartState: 'empty_heart' },
-        { id: '3', source: item3, price: "12.50", name: "Maybelline Sky High Mascara", heartState: 'empty_heart' },
-        { id: '4', source: item4, price: "7.30", name: "NYX Professional Eyeshadow Palette", heartState: 'empty_heart' },
-        { id: '5', source: item5, price: "18.40", name: "Estée Lauder Double Wear Concealer", heartState: 'empty_heart' },
-        { id: '6', source: item6, price: "20.00", name: "Fenty Beauty Pro Filt'r Primer", heartState: 'empty_heart' },
-        { id: '7', source: item7, price: "10.99", name: "Urban Decay Setting Spray", heartState: 'empty_heart' },
-        { id: '8', source: item8, price: "16.75", name: "Huda Beauty Liquid Matte Lipstick", heartState: 'empty_heart' },
-        { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
-    ];
+        console.log("testing an array transfer: " + {arrays});
 
     console.log("ratings: " + itemRatings[9].amountVotes);
     function makeHeartRed(e){

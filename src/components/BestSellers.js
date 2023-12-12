@@ -5,8 +5,7 @@ import SkinItems from './SkinItems';
 import FragnanceItems from './FragnanceItems';
 
 
-function BestSellers({sendingProp}){
-    console.log(sendingProp);
+function BestSellers(){
     const [tabPressed, setTabPressed] = useState('1');
     const [pressed1, setPressed1] = useState("rgb(40, 40, 40)");
     const [pressed2, setPressed2] = useState("rgb(220, 220, 220)");
