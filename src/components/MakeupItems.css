@@ -49,10 +49,22 @@
 .itemNames{
     font-weight:600;
     font-size: 14px;
-    width: 80%;
+    width: 90%;
 }
 .priceDiv{
     font-weight: bold;
+}
+.starsVotesContainer{
+    display: flex;
+    align-items: center;
+}
+.starsContainer{
+    font-size: 12px;
+}
+.votesContainer{
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 4px;
 }
 .buttons{
     position: absolute;
@@ -61,7 +73,7 @@
     border-radius: 10px;
     background: none;
     width: 90%;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     padding: 12px 0 10px 0;
 }
