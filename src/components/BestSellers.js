@@ -50,7 +50,7 @@ function BestSellers(){
                 <button id="skinButton" style={{backgroundColor: pressed2, color: textColor2}} onClick={() => buttonClicked(2)} className='button'>Skin</button>
                 <button id="fragnanceButton" style={{backgroundColor: pressed3, color: textColor3}} onClick={() => buttonClicked(3)} className='button'>Fragnance</button>
             </div>
-            {tabPressed == '1' ? <MakeupItems /> : tabPressed == '2' ? <SkinItems /> : <FragnanceItems />}
+            {tabPressed == '1' ? <MakeupItems pressed={tabPressed} /> : tabPressed == '2' ? <MakeupItems pressed={tabPressed} /> : <MakeupItems pressed={tabPressed} />}
         </div>
     )
 }
