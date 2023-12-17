@@ -14,6 +14,14 @@ import item7 from '../assets/makeup_items/item7.PNG';
 import item8 from '../assets/makeup_items/item8.PNG';
 import item9 from '../assets/makeup_items/item9.PNG';
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // Random index from 0 to i
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+
 const items = [
     { id: '0', source: item0, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
     { id: '1', source: item1, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
@@ -27,7 +35,7 @@ const items = [
     { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
 ];
 
-const itemsSecond = [
+let itemsSecond = [
     { id: '0', source: item9, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
     { id: '1', source: item2, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
     { id: '2', source: item1, price: "9.99", name: "Revlon ColorStay Foundation", heartState: 'empty_heart' },
@@ -40,7 +48,7 @@ const itemsSecond = [
     { id: '9', source: item0, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
 ];
 
-const itemsThird = [
+let itemsThird = [
     { id: '0', source: item0, price: "13.76", name: "INGLOT AMC Eyerliner Gel 5.5g", heartState: 'empty_heart' },
     { id: '1', source: item1, price: "15.20", name: "L'Oréal Paris Matte Lipstick", heartState: 'empty_heart' },
     { id: '2', source: item2, price: "9.99", name: "Revlon ColorStay Foundation", heartState: 'empty_heart' },
@@ -52,6 +60,9 @@ const itemsThird = [
     { id: '8', source: item8, price: "16.75", name: "Huda Beauty Liquid Matte Lipstick", heartState: 'empty_heart' },
     { id: '9', source: item9, price: "21.99", name: "NARS Radiant Creamy Concealer", heartState: 'empty_heart' }
 ];
+
+itemsSecond = shuffleArray(itemsSecond);
+itemsThird = shuffleArray(itemsThird);
 
 function BestSellers(){
     const [tabPressed, setTabPressed] = useState('1');
