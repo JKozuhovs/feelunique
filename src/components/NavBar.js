@@ -15,11 +15,15 @@ class NavBar extends React.Component {
         super(props);
         this.state = {
             search: '',
-            userIconPop: 'hidden'
+            userIconPop: 'hidden',
+            windowShow: 0
         }
         this.handleInput = this.handleInput.bind(this);
         this.userIconEnter = this.userIconEnter.bind(this);
         this.userIconLeave = this.userIconLeave.bind(this);
+        this.hideWindow = this.hideWindow.bind(this);
+        this.showWindow1 = this.showWindow1.bind(this);
+        this.showWindow2 = this.showWindow2.bind(this);
     }
     handleInput(event){
         this.setState({
@@ -35,6 +39,21 @@ class NavBar extends React.Component {
     userIconLeave(){
         this.setState({
             userIconPop: 'hidden'
+        });
+    }
+    hideWindow(){
+        this.setState({
+            windowShow: 0
+        })
+    }
+    showWindow1(){
+        this.setState({
+            windowShow: 1
+        });
+    }
+    showWindow2(){
+        this.setState({
+            windowShow: 2
         });
     }
 
@@ -73,19 +92,20 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>
                 </div>
-                <div className='bottomNavBar'>
+                <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
                     <ul className='nav-buttons'>
-                        <li>Black Friday</li>
-                        <li>Christmas</li>
-                        <li>Brands</li>
-                        <li>Make up</li>
-                        <li>Skincare</li>
-                        <li>Hair</li>
-                        <li>Fragnance</li>
-                        <li>Body</li>
-                        <li>Lifestyle</li>
-                        <li>New</li>
+                        <li onMouseEnter={this.showWindow1}>Black Friday</li>
+                        <li onMouseEnter={this.showWindow2}>Christmas</li>
+                        <li onMouseEnter={this.showWindow1}>Brands</li>
+                        <li onMouseEnter={this.showWindow2}>Make up</li>
+                        <li onMouseEnter={this.showWindow1}>Skincare</li>
+                        <li onMouseEnter={this.showWindow2}>Hair</li>
+                        <li onMouseEnter={this.showWindow1}>Fragnance</li>
+                        <li onMouseEnter={this.showWindow2}>Body</li>
+                        <li onMouseEnter={this.showWindow1}>Lifestyle</li>
+                        <li onMouseEnter={this.showWindow2}>New</li>
                     </ul>
+                    {this.state.windowShow == 1 ? <div>Will show window 1</div> : this.state.windowShow == 2 ? <div>Will show window 2</div> : <div>This would hide a window</div>}
                 </div>
             </div>
         </div>
