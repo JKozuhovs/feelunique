@@ -21,7 +21,6 @@ function shuffleArray(array) {
 // const items2 = shuffleArray(items);
 // const items3 = shuffleArray(items);
 
-// console.log("items2: " + items2[0].name);
 
 const itemRatings = [];
 for(let i=0; i < 10; i++){

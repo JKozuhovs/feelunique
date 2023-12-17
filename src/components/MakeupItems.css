@@ -37,6 +37,7 @@
 .itemInfo{
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 .eachItemContainer:hover .heartContainer:hover{
     background-image: url('../assets/heart-images/fully_red.png');
