@@ -26,10 +26,14 @@
     transform: rotate(360deg);
   }
 }
+html, body{
+  overflow-x: hidden;
+}
 
 #main{
   width: 70%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 

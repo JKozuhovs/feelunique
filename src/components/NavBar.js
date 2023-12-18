@@ -6,8 +6,10 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import ukFlag from '../assets/ukflag.svg'
-import FlagPopUp from './FlagPopUp'
+import ukFlag from '../assets/ukflag.svg';
+import FlagPopUp from './FlagPopUp';
+import Window1 from './Window1';
+import Window2 from './Window2';
 
 
 class NavBar extends React.Component {
@@ -105,7 +107,7 @@ class NavBar extends React.Component {
                         <li onMouseEnter={this.showWindow1}>Lifestyle</li>
                         <li onMouseEnter={this.showWindow2}>New</li>
                     </ul>
-                    {this.state.windowShow == 1 ? <div>Will show window 1</div> : this.state.windowShow == 2 ? <div>Will show window 2</div> : <div>This would hide a window</div>}
+                    {this.state.windowShow == 1 ? <Window1 /> : this.state.windowShow == 2 ? <Window2 /> : <></>}
                 </div>
             </div>
         </div>

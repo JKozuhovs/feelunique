@@ -147,6 +147,7 @@ input::placeholder{
     /* border: 1px solid blue; */
     height: 50px;
     display: flex;
+    position: relative;
 }
 .nav-buttons{
     margin: 0;
