@@ -1,31 +1,60 @@
-.window1-container{
+h3{
+    font-size: 14px;
+}
+h4{
+    padding: 0;
+    margin: 0;
+}
+.window1-container, .window2-container{
     box-sizing: border-box;
     position: absolute;
     width: 100vw;
-    border: 1px solid red;
-    background-color: red;
-    bottom: -250px;
+    /* border: 1px solid red; */
+    background-color: white;
+    bottom: -370px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     margin: 0;
     padding: 0;
     transition: 1s;
+    padding-top: 20px;
 }
-.window1-menu{
-    width: 70%;
-    border: 1px solid blue;
+.window1-menu, .window1-menu{
+    width: 60%;
+    /* border: 1px solid blue; */
     height: 100%;
     z-index: 11;
     margin: 0 auto;
+    margin-bottom: 50px;
     display: flex;
     flex-direction:row;
+}
+.window1-menu li{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.window1-menu li:hover{
+    text-decoration: underline;
 }
 .window1-menu-column{
     flex: 1;
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
+.window1-menu-column p{
+    font-weight: 600;
+    font-size: 14px;
+    width: 85%;
+}
+.window1-menu-column p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.window1-menu-column img{
+    height: auto;
+    width: 200px;
 }
 .window1-menu-column ul{
     padding: 0;

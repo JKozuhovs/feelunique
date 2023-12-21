@@ -1,4 +1,6 @@
 import "./Window1.css";
+import firstPicture from '../assets/navbar/firstPicture.png';
+import secondPicture from '../assets/navbar/roxy.png';
 
 function Window1(){
     return(
@@ -16,6 +18,7 @@ function Window1(){
                         <li>Mini Gifts</li>
                         <li>All Gifts</li>
                     </ul>
+                    <h4>Advent calendars</h4>
                 </div>
                 <div className="window1-gifts-by-recipient window1-menu-column">
                     <h3>GIFTS BY RECIPIENT</h3>
@@ -35,12 +38,12 @@ function Window1(){
                 </div>
                 <div className="window1-advent-calendars window1-menu-column">
                     <h3>ADVENT CALENDARS</h3>
-                    <img alt="advent calendars" src=""></img>
+                    <img alt="advent calendars" src={firstPicture}></img>
                     <p>Shop our 2023 Advent Calendars and start the season off with a beauty treat each day</p>
                 </div>
                 <div className="window1-gifts-skincare window1-menu-column">
                     <h3>SKINCARE GIFTS</h3>
-                    <img alt="advent calendars" src=""></img>
+                    <img alt="advent calendars" src={secondPicture}></img>
                     <p>Spark some *serious* joy this holiday with our best skincare gifts.</p>
                 </div>
             </div>
