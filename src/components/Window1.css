@@ -2,13 +2,38 @@
     box-sizing: border-box;
     position: absolute;
     width: 100vw;
-    height: 200px;
     border: 1px solid red;
     background-color: red;
-    bottom: -200px;
+    bottom: -250px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     margin: 0;
     padding: 0;
+    transition: 1s;
+}
+.window1-menu{
+    width: 70%;
+    border: 1px solid blue;
+    height: 100%;
+    z-index: 11;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:row;
+}
+.window1-menu-column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+.window1-menu-column ul{
+    padding: 0;
+    margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.window1-menu-column li{
+    height: 30px;
 }
