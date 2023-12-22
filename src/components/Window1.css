@@ -6,19 +6,16 @@ h4{
     margin: 0;
 }
 .window1-container, .window2-container{
-    box-sizing: border-box;
     position: absolute;
+    top: 125px;
+    box-sizing: border-box;
     width: 100vw;
-    /* border: 1px solid red; */
     background-color: white;
-    bottom: -440px;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 10;
     margin: 0;
     padding: 0;
     transition: 1s;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 .window1-menu, .window1-menu{
     width: 60%;
