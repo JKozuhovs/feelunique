@@ -1,14 +1,25 @@
+h3{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
 .window2-container{
     position: absolute;
+    padding-top: 40px;
+    bottom: -360px;
 }
 .window2-menu{
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    padding-bottom: 60px;
 }
-.window1-menu-column{
+.window2-menu-column{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .window2-types-perfume li{
     font-weight: bold;
@@ -20,4 +31,31 @@
 .window2-home-fragnance li{
     font-weight: 400;
     margin-bottom: 10px;
+}
+.window2-menu-column button{
+    border: 0;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.window2-menu-column ul{
+    padding: 0;
+    margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.window2-menu-column img{
+    height: auto;
+    width: 200px;
+}
+.window2-menu-column li{
+    padding: 0;
+    margin-bottom: 10px;
+}
+.window2-menu-column li:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

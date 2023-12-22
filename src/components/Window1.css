@@ -11,7 +11,7 @@ h4{
     width: 100vw;
     /* border: 1px solid red; */
     background-color: white;
-    bottom: -370px;
+    bottom: -440px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -34,9 +34,7 @@ h4{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.window1-menu li:hover{
-    text-decoration: underline;
-}
+
 .window1-menu-column{
     flex: 1;
     display: flex;

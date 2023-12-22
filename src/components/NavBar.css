@@ -163,7 +163,7 @@ input::placeholder{
     height: 100%;
 }
 
-li{
+.nav-buttons li{
     cursor: pointer;
     flex: 1;
     display: flex;
@@ -174,5 +174,13 @@ li{
     font-weight: bold;
     font-size: 15px;
     height: 100%;
+}
+/* css for all list item elements */
+li{
+    list-style-type: none;
+}
+li:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
