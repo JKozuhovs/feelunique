@@ -10,6 +10,7 @@ import ukFlag from '../assets/ukflag.svg';
 import FlagPopUp from './FlagPopUp';
 import Window1 from './Window1';
 import Window2 from './Window2';
+import SearchTab from './SearchTab';
 
 
 class NavBar extends React.Component {
@@ -27,6 +28,8 @@ class NavBar extends React.Component {
         this.hideWindow = this.hideWindow.bind(this);
         this.showWindow1 = this.showWindow1.bind(this);
         this.showWindow2 = this.showWindow2.bind(this);
+        this.searchBarFocus = this.searchBarFocus.bind(this);
+        this.searchBarFocusLost = this.searchBarFocusLost.bind(this);
     }
     handleInput(event){
         this.setState({
@@ -59,6 +62,16 @@ class NavBar extends React.Component {
             windowShow: 2
         });
     }
+    searchBarFocus(){
+        this.setState({
+            searchActive: true
+        });
+    }
+    searchBarFocusLost(){
+        this.setState({
+            searchActive: false
+        });
+    }
 
     render(){
     return(
@@ -75,7 +88,7 @@ class NavBar extends React.Component {
                     <div className='secondSegment'>
                         <div id='search-container'>
                             <FontAwesomeIcon id="search-icon" icon={faMagnifyingGlass} />
-                            <input type="text" id="main-search-bar" placeholder='Search 50,000+ beauty products, 1500+ brands' value={this.state.search}  onChange={this.handleInput}></input>
+                            <input onFocus={this.searchBarFocus} onBlur={this.searchBarFocusLost} type="text" id="main-search-bar" placeholder='Search 50,000+ beauty products, 1500+ brands' value={this.state.search}  onChange={this.handleInput}></input>
                         </div>
                     </div>
                     <div className='thirdSegment'>
@@ -94,9 +107,7 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>
-                    <div className='searchTab'>
-
-                    </div>
+                    {this.state.searchActive == true ? <SearchTab /> : <></>}
                 </div>
                 <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
                     <ul className='nav-buttons'>
