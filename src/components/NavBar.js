@@ -18,7 +18,8 @@ class NavBar extends React.Component {
         this.state = {
             search: '',
             userIconPop: 'hidden',
-            windowShow: 0
+            windowShow: 0,
+            searchActive: false
         }
         this.handleInput = this.handleInput.bind(this);
         this.userIconEnter = this.userIconEnter.bind(this);
@@ -92,6 +93,9 @@ class NavBar extends React.Component {
                         </div>
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
+                    </div>
+                    <div className='searchTab'>
+
                     </div>
                 </div>
                 <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
