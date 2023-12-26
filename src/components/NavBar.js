@@ -71,6 +71,12 @@ class NavBar extends React.Component {
         this.setState({
             searchActive: false
         });
+        console.log('lost connection');
+    }
+    dataFromSearchTab = (data) => {
+        this.setState({
+            searchActive: false
+        });
     }
 
     render(){
@@ -108,8 +114,8 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>
                     {/* later uncomment this */}
-                    {/* {this.state.searchActive == true ? <SearchTab /> : <></>} */}
-                    <SearchTab />
+                    {this.state.searchActive == true ? <SearchTab /> : <></>}
+                    {/* <SearchTab sendToParent={this.dataFromSearchTab} /> */}
                 </div>
                 <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
                     <ul className='nav-buttons'>

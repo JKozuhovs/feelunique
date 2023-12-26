@@ -85,6 +85,10 @@ input::placeholder{
     font-size: 14px;
     font-weight: bold;
 }
+#main-search-bar:focus{
+    border: none !important;
+    box-shadow: 0 0 5px blue;
+}
 .thirdSegment{
     flex: 0.7;
     height: 100%;

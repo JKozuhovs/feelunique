@@ -1,6 +1,7 @@
 h3{
     margin: 0;
     padding: 0;
+    font-weight: 700;
 }
 ul{
     margin: 0;
@@ -16,18 +17,29 @@ ul{
     width: 100vw;
     border-top: 1px solid rgb(233, 233, 233);
     height: 440px;
-    background-color: yellow;
+    background-color: white;
     z-index: 12;
 }
 .searchTab-menu li{
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 5px;
     color: black
 }
 .searchTab-menu{
-    width: 62%;
+    padding-left: 10px;
+    width: 60%;
     background-color: white;
     height: 100%;
     margin: 0 auto;
+}
+.searchTab-close{
+    display: flex;
+    justify-content: flex-end;
+}
+#searchTab-close-button{
+    font-size: 26px;
+}
+#searchTab-close-button:hover{
+    cursor: pointer;
 }

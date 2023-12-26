@@ -43,6 +43,9 @@ h4{
     font-size: 14px;
     width: 85%;
 }
+.window1-menu-column h3{
+    margin-bottom: 8px;
+}
 .window1-menu-column p:hover{
     text-decoration: underline;
     cursor: pointer;

@@ -1,9 +1,15 @@
 import './SearchTab.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-function SearchTab(){
+function SearchTab(props){
+    const closeWindow = () => {
+        props.sendToParent(false);
+    }
     return(
         <div className='searchTab'>
             <div className='searchTab-menu'>
+                <div className='searchTab-close'>{<FontAwesomeIcon onClick={closeWindow} id='searchTab-close-button' icon="fa-solid fa-xmark" />}</div>
                 <h3>POPULAR SEARCHES</h3>
                 <ul>
                     <li>Rare Beauty</li>
