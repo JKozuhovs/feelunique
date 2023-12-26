@@ -107,7 +107,9 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon className='icon' icon={faHeart} />
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>
-                    {this.state.searchActive == true ? <SearchTab /> : <></>}
+                    {/* later uncomment this */}
+                    {/* {this.state.searchActive == true ? <SearchTab /> : <></>} */}
+                    <SearchTab />
                 </div>
                 <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
                     <ul className='nav-buttons'>
