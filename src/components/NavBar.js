@@ -94,7 +94,7 @@ class NavBar extends React.Component {
                     <div className='secondSegment'>
                         <div id='search-container'>
                             <FontAwesomeIcon id="search-icon" icon={faMagnifyingGlass} />
-                            <input onFocus={this.searchBarFocus} onBlur={this.searchBarFocusLost} type="text" id="main-search-bar" placeholder='Search 50,000+ beauty products, 1500+ brands' value={this.state.search}  onChange={this.handleInput}></input>
+                            <input onFocus={this.searchBarFocus} onBlur={this.searchBarFocusLost}  type="text" id="main-search-bar" placeholder='Search 50,000+ beauty products, 1500+ brands' value={this.state.search}  onChange={this.handleInput}></input>
                         </div>
                     </div>
                     <div className='thirdSegment'>
@@ -114,7 +114,7 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon className='icon' icon={faBasketShopping} />
                     </div>
                     {/* later uncomment this */}
-                    {this.state.searchActive == true ? <SearchTab /> : <></>}
+                    {this.state.searchActive == true && <SearchTab sendToParent={this.dataFromSearchTab} />}
                     {/* <SearchTab sendToParent={this.dataFromSearchTab} /> */}
                 </div>
                 <div onMouseLeave={this.hideWindow} className='bottomNavBar'>
